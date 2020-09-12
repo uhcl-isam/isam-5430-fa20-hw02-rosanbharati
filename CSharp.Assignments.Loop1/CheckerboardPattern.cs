@@ -30,6 +30,7 @@ namespace CSharp.Assignments.Loop1
             Console.WriteLine("Enter the fill character: ");
             char fillChar = Char.Parse(Console.ReadLine());
 
+            for(i=0; i<num)
             // Write your codes here.
         }
     }

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Metadata;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -16,7 +17,21 @@ namespace CSharp.Assignments.Loop1
     {
         public static void Main()
         {
-            // Write your codes here
+            int count = 0;
+            int i = 0;
+            var array = (",");
+            for (i = 0; i < array.Length; i++)
+            {
+                if (array[i] == array[i + 1])
+                {
+                    count++;
+                }
+                else if (array[i] != array[i + 1])
+                {
+                    return;
+                }
+
+                Console.WriteLine(count);
+            }
         }
     }
-}
