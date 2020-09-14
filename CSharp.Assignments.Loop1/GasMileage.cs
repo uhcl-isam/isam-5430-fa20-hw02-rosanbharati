@@ -22,6 +22,38 @@ namespace CSharp.Assignments.Loop1
     {
         public static void Main()
         {
+            int milesDriven = 0;
+            int gallonsUsed=0;
+            double totalMileage, mileage = 0.0;
+            
+            int sumMiles = 0;       
+            int sumGallons = 0;
+            string quit = "1";
+            int count = 1;
+            while(quit!="0")
+            {
+                Console.WriteLine("Please enter positive miles driven for trip #{0}", count);
+                milesDriven = Convert.ToInt32(Console.ReadLine());
+
+                Console.WriteLine("Please enter gallons used driven for trip #{0}", count);
+                gallonsUsed = Convert.ToInt32(Console.ReadLine());
+
+                sumMiles += milesDriven;
+                sumGallons += gallonsUsed;
+
+                Console.WriteLine("Press '0' to stop entering values, or any key to continue");
+                quit =Console.ReadLine();
+                count++;
+
+            }
+            mileage = Convert.ToDouble(milesDriven) / gallonsUsed;
+            totalMileage = Convert.ToDouble(sumMiles) / sumGallons;
+            Console.WriteLine("The mileage per gallon is: {0:N}", mileage);
+            Console.WriteLine("The mileage is : {0:N}", totalMileage);
+            
+
+
+            
             // prompt user for non-negative miles and obtain the input from user
             // codes go here.
         }

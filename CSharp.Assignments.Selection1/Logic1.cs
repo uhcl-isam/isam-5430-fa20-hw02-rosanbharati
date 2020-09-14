@@ -128,18 +128,20 @@ namespace CSharp.Assignments.Loop1
         /// <returns></returns>
         public static int TeaParty(int tea, int candy)
         {
-            if ((tea >= 5) && (candy >= 5))
-            {
-                return 1;
-            }
-            else if (tea == ((2 * candy)) || candy == ((2 * tea)))
-            {
-                return 2;
-            }
-            else if ((tea < 5) || (candy) < 5)
+            if ((tea < 5) || (candy < 5))
             {
                 return 0;
             }
+            else if (tea >= ((2 * candy)) || candy >= ((2 * tea)))
+            {
+                return 2;
+            }
+            else if ((tea >= 5) || (candy) >=5)
+            {
+                return 1;
+            }
+            
+            
             return 0;
         }
 
@@ -181,20 +183,8 @@ namespace CSharp.Assignments.Loop1
         /// <returns>either: "7:00" or "10:00" or "off"</returns>
         public static string AlarmClock(DayOfWeek dayOfWeek, bool vacation)
         {
-            if (vacation)
-            {
-                if (dayOfWeek>0 && dayOfWeek<6)
-                {
-                    return "10:00";
-                }
-                return "off";
-            }
-            else if(dayOfWeek>0 && dayOfWeek<6)
-            {
-                return "7:00";
-            }
-            return "10:00";
- 
+            throw new NotImplementedException();
+
         }
 
 
@@ -264,11 +254,11 @@ namespace CSharp.Assignments.Loop1
             int ab = Math.Abs(a - b);
             int ac = Math.Abs(a - c);
             int bc = Math.Abs(b - c);
-            if (ab <= 1 && ac >= 2 && bc >= 2)
+            if (ab <= 1 && ac >1 && bc >1)
             {
                 return true;
             }
-            else if (ac <= 1 && ab >= 2 && bc >= 2)
+            else if (ac <= 1 && ab >1 && bc >1)
             {
                 return true;
             }

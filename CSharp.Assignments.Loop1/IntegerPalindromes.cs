@@ -17,9 +17,17 @@ namespace CSharp.Assignments.Loop1
     {
         public static void Main()
         {
+
+            Console.WriteLine("Enter a number that is 9 digit long:");
+            string num = Console.ReadLine();
+            while (num.Length > 9 || num.Length < 9)
+            {
+                Console.WriteLine("The number you entered is invalid. Please try another number.");
+                num = Console.ReadLine();
+
+            }
             int n, r, sum = 0, temp;
-            Console.Write("Enter the Number: ");
-            n = int.Parse(Console.ReadLine());
+            n = int.Parse(num);
             temp = n;
             while (n > 0)
             {
@@ -28,11 +36,9 @@ namespace CSharp.Assignments.Loop1
                 n = n / 10;
             }
             if (temp == sum)
-                Console.Write("Number is Palindrome.");
+                Console.Write("a Palindrome.");
             else
-                Console.Write("Number is not Palindrome");
-            // enter sentinel inputs
-            // then check the palindrome only once.
+                Console.Write("not a Palindrome");
         }
     }
 }

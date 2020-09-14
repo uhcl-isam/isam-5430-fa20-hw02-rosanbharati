@@ -29,8 +29,6 @@ namespace CSharp.Assignments.Loop1
             int num = int.Parse(Console.ReadLine());
             Console.WriteLine("Enter the fill character: ");
             char fillChar = Char.Parse(Console.ReadLine());
-
-            for(i=0; i<num)
             // Write your codes here.
         }
     }

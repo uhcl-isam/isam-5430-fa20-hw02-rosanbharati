@@ -116,7 +116,7 @@ namespace CSharp.Assignments.Loop1.Tests
             Assert.AreEqual(false, Logic1.NearTen(3));
             Assert.AreEqual(true, Logic1.NearTen(1));
         }
-
+        [Test]
         [Category("Selection")]
         public void TeaParty()
         {
